@@ -6,6 +6,7 @@
 <title>教师登录</title>
 </head>
 <body background:url(http://210.43.247.44/logo/logo_school.png);>
- 尊敬的老师，欢迎来到教务管理系统
+	<br>
+	 尊敬的老师，欢迎来到教务管理系统
 </body>
 </html>

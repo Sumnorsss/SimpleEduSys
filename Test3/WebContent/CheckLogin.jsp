@@ -7,16 +7,11 @@
 <title>教师界面</title>
 </head>
 <body>
-<jsp:include page = "Login.jsp"/>
 <%
 	String userName = request.getParameter("username");
 	String pass = request.getParameter("pass");
 	String valueType = request.getParameter("logType");
 	
-	if(valueType.equals("")){
-	
-	valueType = "student";
- 	}
 	
 	if(userName.equals("ZhangSan") 
 			&& pass.equals("12345")
@@ -30,9 +25,9 @@
 			&& pass.equals("12345")
 			&&valueType.equals("student")){	
 %>
-		<script>alert("身份验证错误");</script>
-		
-<% 	}
+		<script>alert("身份验证错误");</script>	
+<% 	response.setHeader("Refresh", "0;url=Login.jsp");	
+	}
  	else if(userName.equals("Jack") 
 			&& pass.equals("12345")
 			&&valueType.equals("student")){
@@ -42,23 +37,27 @@
 	}else if(userName.equals("Jack")
 			&& pass.equals("12345")
 			&&valueType.equals("teacher")){
+			
 %>
-		out.print("身份验证错误");
-<%	}
+		<script>alert("身份验证错误");</script>		
+<%		response.setHeader("Refresh", "0;url=Login.jsp");
+}
  	else if(userName.length()==0||pass.length()==0){	
+ 		
 %>
 		<script>alert("用户名或密码不能为空");</script>
+		
 <%	}
 
 	else{
+		//out.print("用户名或者密码错误");
 %>
-		<script>alert("用户名或者密码错误");</script>
+	<script>alert("用户名或者密码错误");</script>
+<%	response.setHeader("Refresh", "0;url=Login.jsp");
+		
+ 	}%>
+
 	
-
-	<font color=blue>正在返回首页</font>
-	<%response.setHeader("Refresh", "1;Login.jsp"); %>
-<% 	}%>
-
 	
 	
 

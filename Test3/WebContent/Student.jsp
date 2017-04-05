@@ -6,6 +6,6 @@
 <title>学生界面</title>
 </head>
 <body>
-	欢迎来到教务管理系统
+	欢迎来到教务管理系统学生界面
 </body>
 </html>

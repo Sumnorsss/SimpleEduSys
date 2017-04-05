@@ -118,8 +118,8 @@ table {
 			<div style="color: #0099FF" id="right">
 				<table border="0">
 					<tr>
-						<td class="headline">用户名：<input type="text" name="username" /><br />
-							<br /> 密&nbsp&nbsp码 ：<input type="password" name="pass" /><br />
+						<td class="headline">用户名：<input required = "required" type="text" name="username" /><br />
+							<br /> 密&nbsp&nbsp码 ：<input required = "required" type="password" name="pass" /><br />
 							 
 							<br /> 验证码：<input type="text" name="checknum"
 							style="width: 76px; height: 18px" id="input1" /> 
@@ -136,11 +136,11 @@ table {
 
 				<input type="radio" name="logType" value="dept" />部门 <input
 					type="radio" name="logType" value="teacher" />教师 <input
-					type="radio" name="logType" value="student" />学生 <input
+					type="radio" name="logType" value="student" checked />学生 <input
 					type="radio" name="logType" value="visitor">访客 <br /> <br />
 				<input  id = "Button1" type="submit" class="button" name="Sub" value="　　　&nbsp"
-					onclick="return validate();/> 
-					 <!-- onclick="validate();" -->
+					onclick="return validate();"/> 
+					
 				<input type="reset" class="button2"
 					name="rSet" value="　　　&nbsp" />
 			</div>
